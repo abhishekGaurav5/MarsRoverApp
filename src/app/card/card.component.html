@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="card-body lead">
+    <span class="fetchimg"><img [src]="data.img_src" alt="img-space" /></span>
+
+    <h5 class="card-title">Id: {{ data.id }}</h5>
+    <p><b> Full name :</b> {{ data.camera.full_name }}</p>
+    <p>
+      <b>Rover landing date :</b>
+
+      {{ data.rover.landing_date }}
+    </p>
+    <p><b>Rover launch date</b>:{{ data.rover.launch_date }}</p>
+    <p><b>Earth date </b>:{{ data.earth_date }}</p>
+    <p><b>Status </b>: {{ data.rover.status }}</p>
+  </div>
+</div>

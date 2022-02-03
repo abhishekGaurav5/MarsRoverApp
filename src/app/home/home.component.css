@@ -1,0 +1,19 @@
+.main-cnt {
+  font-size: 20px;
+  margin-top: 10%;
+  font-weight: 400;
+}
+.head {
+  font-size: 80px;
+  font-weight: 350;
+}
+
+.buttons {
+  float: right;
+}
+.btn {
+  font-size: 18px;
+  margin: 10px;
+  border-radius: 15px;
+  font-weight: 500;
+}

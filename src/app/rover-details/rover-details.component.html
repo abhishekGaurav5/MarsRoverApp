@@ -1,0 +1,71 @@
+<!-- <div class="container-fluid main-wrapper">
+  <div class="row">
+    <div class="col-md-4">
+      <app-sidenav></app-sidenav>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8">
+        <h1 class="lead">roverName</h1>
+        <div class="row">
+          <div class="card">
+            <div class="card-body">
+             <img
+                [src]="dataFetched[item].camera.img_src"
+                alt="img-space"
+                class="space-img"
+              /> -->
+
+<!-- <h5 class="card-title">dataFetched[item].id</h5>
+              <p>Camera Full name : dataFetched[item].camera.full_name</p>
+              <p>Rover landing date : dataFetched[item].rover.landing_date</p>
+              <p>Rover launch date:dataFetched[item].rover.launch_date</p>
+              <p>Earth date : dataFetched[item].rover.earth_date }</p>
+              <p>Status : dataFetched[item].rover.status</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">
+          With supporting text below as a natural lead-in to additional content.
+        </p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- </div> -->
+
+<div class="row">
+  <div class="col-md-3">
+    <app-sidenav></app-sidenav>
+  </div>
+
+  <div class="col-md-9">
+    <p class="lead header">{{ rover }}</p>
+    <div class="container">
+      <div class="row">
+        <div
+          class="card-body col-md-6"
+          *ngFor="
+            let item of dataFetched
+              | paginate: { itemsPerPage: 2, currentPage: pno }
+          "
+        >
+          <app-card [data]="item"></app-card>
+        </div>
+      </div>
+      <pagination-controls
+        (pageChange)="pno = $event"
+        class="bg-dark"
+      ></pagination-controls>
+    </div>
+  </div>
+</div>
