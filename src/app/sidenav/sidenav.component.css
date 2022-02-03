@@ -3,6 +3,11 @@ ng-sidebar-container {
   z-index: 0;
 }
 
+.ham {
+  font-size: 30px;
+  outline: none;
+  overflow: hidden;
+}
 p {
   margin-top: 60px;
   font-size: 40px;
@@ -16,7 +21,7 @@ p:hover {
   width: 250px;
   padding: 2em 3em;
   box-shadow: 0 0 2.5em rgba(85, 85, 85, 0.5);
-  background-color: rgb(156, 130, 107,0.3);
+  background-color: rgb(156, 130, 107, 0.3);
 }
 .menu {
   margin-top: 40px;

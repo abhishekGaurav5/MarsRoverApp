@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidenav',
@@ -8,10 +8,20 @@ import { Router } from '@angular/router';
 })
 export class SidenavComponent implements OnInit {
   opened = false;
-  constructor() {}
+  curr: string = '';
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.curr = this.activatedRoute.snapshot.params['rover'];
+
+    this.activatedRoute.params.subscribe((param: Params) => {
+      this.curr = param['rover'];
+      console.log('subscribe methodd');
+    });
+  }
+
   toggleSidebar() {
     this.opened = !this.opened;
+    console.log('toggle side bar');
   }
 }
